@@ -41,6 +41,7 @@ The first command opens a TCP port to your cluster so that you can manipulate da
 Then, navigate to `http://localhost:3000` in your browser and turn on the `etl_dag`. It will create all the tables and insert data from S3 to the staging, dimension, and fact tables. You can click in the DAG name to follow the process execution steps. Finally, CLEAN UP your resources using the commands below:
 
 ```shell
+$ . stop-ariflow.sh
 $ python iac.py -d
 $ watch -n 15 'python iac.py -s'
 ```
